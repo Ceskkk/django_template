@@ -1,8 +1,13 @@
-# General files
-.env
+# Node
 package-lock.json
 node_modules
 
-# Builds and cache
-static/build
+# Django
 __pycache__
+media
+
+# Build
+static/build
+
+# Environment
+.env
