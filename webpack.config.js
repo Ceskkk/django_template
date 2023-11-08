@@ -41,6 +41,13 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|otf)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "./static/build/fonts/[hash][ext][query]",
+        },
+      },
     ],
   },
   plugins: [

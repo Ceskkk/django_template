@@ -1,3 +1,8 @@
+# General files
 .env
 package-lock.json
 node_modules
+
+# Builds and cache
+static/build
+__pycache__
