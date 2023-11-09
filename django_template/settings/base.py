@@ -1,19 +1,22 @@
 from unipath import Path
-import environ, os
+import environ
 
 
 env = environ.Env()
 environ.Env.read_env()
 
-# Base config
 
+# Base config
 BASE_DIR = Path(__file__).ancestor(3)
 
 SECRET_KEY = env("SECRET_KEY")
 
 
-# Application definition
+# Other config
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+
+# Application definition
 DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -27,7 +30,9 @@ LOCAL_APPS = (
 
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+
+)
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -41,7 +46,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_template.urls'
+ROOT_URLCONF = 'rest_auth.urls'
 
 TEMPLATES = [
     {
@@ -59,12 +64,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_template.wsgi.application'
+WSGI_APPLICATION = 'rest_auth.wsgi.application'
 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -83,7 +87,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
