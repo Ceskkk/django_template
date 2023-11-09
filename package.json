@@ -2,7 +2,6 @@
   "name": "django_template",
   "version": "0.9.0",
   "description": "",
-  "type": "module",
   "main": "webpack.config.js",
   "devDependencies": {
     "babel-loader": "^9.1.3",
