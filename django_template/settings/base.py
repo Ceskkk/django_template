@@ -46,7 +46,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'rest_auth.urls'
+ROOT_URLCONF = 'django_template.urls'
 
 TEMPLATES = [
     {
@@ -64,7 +64,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rest_auth.wsgi.application'
+WSGI_APPLICATION = 'django_template.wsgi.application'
 
 
 # Password validation
